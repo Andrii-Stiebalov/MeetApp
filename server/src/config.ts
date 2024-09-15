@@ -5,7 +5,7 @@ if (!process.env.BOT_TOKEN) {
 }
 
 if (!process.env.PROVIDER_TOKEN) {
-  throw new Error('PROVIDER_TOKEN is not defined. Please set it in .env file.')
+  // throw new Error('PROVIDER_TOKEN is not defined. Please set it in .env file.')
 }
 
 if (!process.env.WEB_APP_URL) {
