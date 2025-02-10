@@ -1,6 +1,6 @@
 <!-- eslint-disable clean-timer/assign-timer-id -->
 <script setup lang="ts">
-import { Placeholder, List, ListItem, ListItemExpandable, Sections, Section, ListCard, DatePicker, DatePickerCompact, Amount, Rating, Text, Lottie } from '@/presentation/components'
+import { Placeholder, List, ListItem, ListItemExpandable, Sections, Section, ListCard, DatePicker, DatePickerCompact, Amount, Rating, Text, Lottie, Navigation } from '@/presentation/components'
 import { onMounted, ref, onBeforeUnmount, watchEffect, watch } from 'vue'
 import { useTripDetails } from '@/domain/services/useTripDetails'
 import { useTelegram, useScroll, useLottie } from '@/application/services'
@@ -178,9 +178,9 @@ function resetSearch(): void {
   result.value = []
   isLoading.value = undefined
   isSearchFinished.value = false
-  showMainButton('Search', () => {
-    search()
-  })
+  // showMainButton('Search', () => {
+  //   // search()
+  // })
 }
 
 watch([
@@ -219,7 +219,7 @@ onBeforeUnmount(() => {
 })
 </script>
 <template>
-  <div class="home-page">
+  <div class="home-page" v-if="false">
     <Placeholder
       ref="landing"
       class="landing"
@@ -396,6 +396,12 @@ onBeforeUnmount(() => {
       </Section>
     </Sections>
   </div>
+  <div class="home-page">
+    <div>
+      
+    </div>
+    <Navigation />
+  </div>
 </template>
 
 <style scoped>
@@ -433,7 +439,6 @@ onBeforeUnmount(() => {
   flex-direction: column;
   min-height: 100%;
   transform: translateZ(0);
-
   .sections {
     flex-grow: 1;
     grid-auto-rows: min-content;

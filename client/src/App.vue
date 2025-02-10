@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onBeforeMount, onErrorCaptured } from 'vue'
 import { useTelegram } from '@/application/services'
+import router from './application/router'
 
 const { colorScheme } = useTelegram()
 
@@ -20,6 +21,7 @@ onErrorCaptured((error: Error) => {
 
 onBeforeMount(() => {
   if (colorScheme !== undefined) {
+    console.log('colorScheme')
     document.body.classList.add(colorScheme)
   }
 })
@@ -27,7 +29,6 @@ onBeforeMount(() => {
 
 <template>
   <div class="app">
-    <div class="app-header"></div><!--Teleport location for PageWithHeader component-->
     <RouterView v-slot="{ Component }">
       <transition
         name="default-segue"

@@ -18,6 +18,7 @@ import Text from './Text/Text.vue'
 import Rating from './Rating/Rating.vue'
 import FixedFooter from './Page/FixedFooter.vue'
 import Lottie from './Lottie/Lottie.vue'
+import Navigation from './Navigation/Navigation.vue'
 
 export {
   PageWithHeader,
@@ -40,4 +41,5 @@ export {
   Rating,
   FixedFooter,
   Lottie,
+  Navigation,
 }

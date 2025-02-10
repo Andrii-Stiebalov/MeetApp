@@ -20,7 +20,7 @@ export default {
   publicHost: process.env.PUBLIC_HOST || 'http://localhost:3000',
   webAppUrl: process.env.WEB_APP_URL,
   botToken: process.env.BOT_TOKEN,
-  providerToken: process.env.PROVIDER_TOKEN,
+  // providerToken: process.env.PROVIDER_TOKEN,
   allowedOrigins: process.env.ALLOWED_ORIGINS || '*',
   isTestEnvironment: process.env.IS_TEST_ENVIRONMENT === 'true',
   port: process.env.PORT || '3000',
